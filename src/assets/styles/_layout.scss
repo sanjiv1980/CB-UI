@@ -162,7 +162,6 @@
 .sidebar-icon-only {
   @media (min-width: 992px) {
     .navbar {
-      left: $sidebar-width-icon;
       .navbar-menu-wrapper {
         width: 100%;
       }
@@ -245,7 +244,7 @@
               .menu-title {
                 @include display-flex;
                 @include align-items(center);
-                background: $icon-only-menu-bg;
+                background: #fff;
                 padding: 0.5rem 1.4rem;
                 left: $sidebar-width-icon;
                 position: absolute;
@@ -294,7 +293,7 @@
                 width: 5px;
                 height: 5px;
                 border-radius: 50%;
-                background-color: $sidebar-submenu-color;
+                background-color: #fff;
                 position: absolute;
                 left: 0;
             }
@@ -342,6 +341,7 @@
       -ms-transition: all $action-transition-duration $action-transition-timing-function;
       .content-wrapper{
         margin-left: 72px;
+        display: block;
         transition: all $action-transition-duration $action-transition-timing-function;
         -webkit-transition: all $action-transition-duration $action-transition-timing-function;
         -moz-transition: all $action-transition-duration $action-transition-timing-function;

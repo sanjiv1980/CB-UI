@@ -15,6 +15,7 @@ import { InputText } from 'primereact/inputtext';
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
+import { Link } from 'react-router-dom';
 
 export default function UserList() {
 
@@ -230,7 +231,7 @@ export default function UserList() {
            <h3 className="page-title">User</h3>
            <nav aria-label="breadcrumb">
               <ol className="breadcrumb">
-                 <li className="breadcrumb-item"><a href="javascript:void(0)" onClick={event => event.preventDefault()}>User</a></li>
+                 <li className="breadcrumb-item"><Link onClick={event => event.preventDefault()}>User</Link></li>
                  <li className="breadcrumb-item active" aria-current="page">User List</li>
               </ol>
            </nav>

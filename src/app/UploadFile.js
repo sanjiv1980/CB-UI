@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import DropFileInput from './shared/DrapDrop';
+import Tooltip from 'react-bootstrap/Tooltip';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 
 export default function UploadFile() {
   const [disbled, setdisbled] = useState(true);
@@ -32,7 +34,19 @@ const onFileChange = (files) => {
             <div>
            
             <DropFileInput onFileChange={(files) => onFileChange(files)} />
-            <button className='upload_file' disabled={disbled}><i className="mdi mdi-upload"></i> Upload</button>
+
+       <OverlayTrigger
+        delay={{ hide: 450, show: 300 }}
+        overlay={(props) => (
+          <Tooltip {...props}>
+            Upload
+          </Tooltip>
+        )}
+        placement="bottom"
+      >
+         <button className='upload_file' disabled={disbled}><i className="mdi mdi-upload"></i> Upload</button>
+      </OverlayTrigger>
+           
             </div>
               
           </div>

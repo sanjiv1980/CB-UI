@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Progressbar from '../shared/Progressbar';
 import {Line } from 'react-chartjs-2';
 import CostBreakDownCharts from '../shared/CostBreakDownCharts';
+import { Link } from 'react-router-dom';
 export class Dashboard extends Component {
   constructor(props){
     super(props);
@@ -119,7 +120,7 @@ areaData2 = [
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="javascript:void(0)">Home</a>
+                <Link>Home</Link>
               </li>
               <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
             </ol>
