@@ -13,6 +13,8 @@ import Products from './components/Products'
 import NewProduct from './components/NewProduct'
 import FeaturedProduct from './components/FeaturedProduct'
 import Navbar from './components/Navbar'
+import Users from './components/Users'
+import UserDetail from './components/UserDetail'
 
 function App() {
 
@@ -27,6 +29,8 @@ function App() {
                    <Route path='featured' element={<FeaturedProduct />}></Route>
                    <Route path='new' element={<NewProduct />}></Route>
             </Route>
+            <Route path='/users' element={<Users />}></Route>
+            <Route path='/users/:userId' element={<UserDetail />}></Route>
             <Route path='*' element={<NoMatch />}></Route>
         </Routes>
 
