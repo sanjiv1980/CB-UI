@@ -9,6 +9,9 @@ import Home from './components/Home'
 import About from './components/About'
 import OrderSummary from './components/OrderSummary'
 import NoMatch from './components/NoMatch'
+import Products from './components/Products'
+import NewProduct from './components/NewProduct'
+import FeaturedProduct from './components/FeaturedProduct'
 import Navbar from './components/Navbar'
 
 function App() {
@@ -20,6 +23,10 @@ function App() {
             <Route path='/' element={<Home />}></Route>
             <Route path='/about' element={<About />}></Route>
             <Route path='/order-summary' element={<OrderSummary />}></Route>
+            <Route path='/products' element={<Products />}>
+                   <Route path='featured' element={<FeaturedProduct />}></Route>
+                   <Route path='new' element={<NewProduct />}></Route>
+            </Route>
             <Route path='*' element={<NoMatch />}></Route>
         </Routes>
 
@@ -39,8 +46,6 @@ function App() {
         </Welcome>*/}
     </div>
   );
-
-
 
 }
 
